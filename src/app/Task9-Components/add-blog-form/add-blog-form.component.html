@@ -1,0 +1,23 @@
+
+<div class="my-3">
+    <h4>Add a Blog</h4>
+    <form (ngSubmit)="onSubmit()" >
+        <div class="mb-3">
+          <label for="title" class="form-label">Title</label>
+          <input type="text" [(ngModel)]="title" class="form-control" id="title"  name="title" >
+         
+        </div>
+        <div class="mb-3">
+          <label for="content" class="form-label">Content</label>
+          <input type="text" [(ngModel)]="content" class="form-control" id="content" name="content">
+        </div>
+       
+        <div class="mb-3">
+          <label for="author" class="form-label">Author</label>
+          <input type="text" [(ngModel)]="author" class="form-control" id="author" name="author">
+        </div>
+       
+        <button type="submit" class="btn btn-sm btn-primary">Add Blog</button>
+      </form>
+    
+      </div>

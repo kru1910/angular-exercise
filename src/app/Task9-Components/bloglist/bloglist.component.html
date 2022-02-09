@@ -1,0 +1,10 @@
+
+<app-add-blog-form (blogAdd)="addBlog($event)"></app-add-blog-form>
+
+<h4>Your Blogs</h4>
+<div *ngIf="this.blogs.length===0; else elseBlock">No blogs to display.</div>
+<ng-template #elseBlock>
+    <div *ngFor="let blog of blogs">
+        <app-blog-item [blog]="blog" (blogDelete)="deleteBlog($event)"></app-blog-item>
+    </div>
+</ng-template>

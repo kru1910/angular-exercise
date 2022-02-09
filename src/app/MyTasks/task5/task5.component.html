@@ -1,0 +1,36 @@
+<h3>Task-5: Directives in Angular  </h3>
+<br/>
+
+<div>
+    <h5>Structural Directives</h5>
+    
+    <h6>Example: ngFor</h6>
+    <table [cellPadding]="5">
+        <tr *ngFor="let customer of customers">
+            <td>{{customer.customerNo}}</td>
+            <td>{{customer.name}}</td>
+            <td>{{customer.city}}</td>
+        </tr>
+    </table>
+    <br>
+    <h6>Example: ngIf</h6>
+    <div *ngIf="show==true"> 
+        This is shown if condition is true
+    </div>
+     
+</div>
+<div>
+    <h5>Attribute Directives</h5>
+
+    <div [ngClass]="'demo'">
+        <p>
+            Example: ngClass
+        </p>
+    </div>
+    <div [ngStyle]="{'color': 'blue', 'font-size': '24px', 'font-weight': 'bold'}">
+        <p>
+            Example: ngStyle
+        </p>
+    </div>
+
+</div>

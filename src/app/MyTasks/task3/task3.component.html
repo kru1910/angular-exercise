@@ -1,0 +1,23 @@
+<h3>Task-3: Angular lifecycle hook events </h3>
+<br/> 
+
+<div style="margin: 10px;">
+    <h5>ngOnInit & ngOndestroy</h5>
+    <h6>{{construc}}</h6>
+    <h6>{{init}}</h6>
+</div>
+
+<div style="margin: 10px;">
+    <button (click)="toggleChild()">Toggle Child</button>
+    <div *ngIf="togChild">
+        <app-task3-child></app-task3-child>
+    </div>
+</div>
+
+<hr/>
+
+<div style="margin: 10px;">
+    <h5>ngOnchanges && ngDoCheck</h5>
+    <input #event type="text" placeholder="Enter text" (keyup)="sendText(event.value)"/>
+    <app-task3-child [text]='sendTex'></app-task3-child>
+</div>
